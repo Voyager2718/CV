@@ -8,7 +8,167 @@
     <script type="text/javascript" src="resources/index.js"></script>
     <script type="text/javascript" src="resources/lang_en.js"></script>
     <script type="text/javascript" src="resources/solar.js"></script>
+    <script type="text/javascript" src="resources/device.min.js"></script>
+
+    <script>
+        function copyToClipboard(value) {
+            var target = document.getElementById("hiddenText");
+            target.textContent = value;
+            console.log(target.textContent);
+            select(target);
+            document.execCommand("copy");
+        }
+
+        function select(element) {
+            var selectedText;
+
+            if (element.nodeName === 'INPUT' || element.nodeName === 'TEXTAREA') {
+                element.focus();
+                element.setSelectionRange(0, element.value.length);
+
+                selectedText = element.value;
+            }
+            else {
+                if (element.hasAttribute('contenteditable')) {
+                    element.focus();
+                }
+
+                var selection = window.getSelection();
+                var range = document.createRange();
+
+                range.selectNodeContents(element);
+                selection.removeAllRanges();
+                selection.addRange(range);
+
+                selectedText = selection.toString();
+            }
+
+            return selectedText;
+        }
+    </script>
+
+    <script>
+        var zoom = 100;
+        var infoWindowOpened = false;
+        var inInfoWindow = false;
+        var stopClosingInfoWindow = false;
+        //Init
+        $(document).ready(function () {
+            //Device detect
+            if (device.mobile()) {
+                $("body").css("font-size", "200%");
+                zoom = 200;
+            }
+            else if (device.tablet()) {
+                $("body").css("font-size", "300%");
+                zoom = 300;
+            }
+            $("#cv").text(lang.WebCV);
+            $("#cardTitle0 h2").text(lang.PersonalInfo);
+            $("#cardTitle1 h2").text(lang.EducationInfo);
+            $("#cardTitle2 h2").text(lang.ProfessionalExp);
+            $("#cardTitle3 h2").text(lang.Abilities);
+            $("#cardTitle4 h2").text(lang.Interests);
+            $("#contact").text(lang.Email).css({
+                "title": lang.Clickboard,
+                "cursor": "pointer",
+                "display": "inline-block",
+            }).attr("title", lang.Clipboard);
+            setPositions();
+
+            //Mouseover listener
+            $(".mouseover").mouseover(function () {
+                if (!infoWindowOpened) {
+                    $("<div>", {
+                        "id": "infoWindow",
+                    }).appendTo("body");
+                    infoWindowOpened = true;
+                    stopClosingInfoWindow = true;
+                }
+            });
+
+            //Mouseout listener
+            $(".mouseover").mouseout(function () {
+                stopClosingInfoWindow = false;
+                setTimeout(closeInfoWindow, 500);
+            });
+
+            //Onclick listener
+            $(".cardContent").css("display", "none");
+            $(".cardTitle").click(function () {
+                $("#cardContent" + $(this).attr("id").substring(9, 10)).slideToggle("fast");
+            })
+            $("#contact").click(function () {
+                //TODO: Copy to clipboard
+            });
+
+            //Double click listener
+            $(".cardTitle").dblclick(function () {
+                $(".cardContent").slideDown();
+            })
+        });
+
+        //Dynamic elements listener
+        $(document).on("mouseover", "#infoWindow", function () {
+            inInfoWindow = true;
+        });
+
+        $(document).on("mouseout", "#infoWindow", function () {
+            closeInfoWindow();
+            inInfoWindow = false;
+        });
+
+        //Mousemove listener
+        $(document).mousemove(function (e) {
+            var infoWindow = $("#infoWindow");
+            //Deal with overflow
+            console.info("b" + inInfoWindow);
+            if (infoWindowOpened && !inInfoWindow) {
+                if (parseInt(infoWindow.css("width")) + e.clientX > $(document.body).width()) {
+                    infoWindow.css("left", (e.clientX - 5 - parseInt(infoWindow.css("width"))) + "px");
+                    infoWindow.css("top", (e.clientY + 5) + "px");
+                }
+                else {
+                    infoWindow.css("left", ((e.clientX + 5) + "px"));
+                    infoWindow.css("top", (e.clientY + 5) + "px");
+                }
+            }
+        });
+
+        //Keyup listener
+        $(document).keyup(function (e) {
+            if (e.keyCode == 27) {
+                if (infoWindowOpened)
+                    closeInfoWindow();
+            }
+        });
+
+        //Onresize
+        $(window).resize(function () {
+            setPositions();
+        });
+
+        //Functions
+        function setPositions() {
+            $("#canvas").css("left", ($(window).width() - 900) / 2 + "px");
+            if (!device.landscape())
+                $("body").css("font-size", 1.5 * zoom + "%");
+            else
+                $("body").css("font-size", zoom + "%");
+        }
+
+        function closeInfoWindow() {
+            if (!inInfoWindow && !stopClosingInfoWindow) {
+                $("#infoWindow").remove();
+                infoWindowOpened = false;
+            }
+        }
+    </script>
+
     <link rel="stylesheet" href="resources/index.css" />
+    <script type="text/javascript">
+        console.info("WebCV v0.22");
+    </script>
 </head>
 <body>
     <canvas id="canvas" height="900" width="900"></canvas>
@@ -23,20 +183,53 @@
             <!--First card-->
             <div class="cardTitle" id="cardTitle0">
                 <!--Title area-->
-                <h2 id="cardTitle0"></h2>
+                <h2></h2>
             </div>
             <div class="cardContent" id="cardContent0">
                 <!--Card content-->
-                <p>Something</p>
+                <p>YANG Zhipeng</p>
             </div>
         </div>
         <div>
             <!--Second card-->
             <div class="cardTitle" id="cardTitle1">
                 <!--Title area-->
-                <h2 id="cardTitle1"></h2>
+                <h2></h2>
             </div>
             <div class="cardContent" id="cardContent1">
+                <!--Card content-->
+                <p>Something</p>
+            </div>
+        </div>
+        <div>
+            <!--Third card-->
+            <div class="cardTitle" id="cardTitle2">
+                <!--Title area-->
+                <h2></h2>
+            </div>
+            <div class="cardContent" id="cardContent2">
+                <!--Card content-->
+                <p>Something</p>
+            </div>
+        </div>
+        <div>
+            <!--Forth card-->
+            <div class="cardTitle" id="cardTitle3">
+                <!--Title area-->
+                <h2></h2>
+            </div>
+            <div class="cardContent" id="cardContent3">
+                <!--Card content-->
+                <p>Something</p>
+            </div>
+        </div>
+        <div>
+            <!--Fifth card-->
+            <div class="cardTitle" id="cardTitle4">
+                <!--Title area-->
+                <h2></h2>
+            </div>
+            <div class="cardContent" id="cardContent4">
                 <!--Card content-->
                 <p>Something</p>
             </div>
