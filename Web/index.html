@@ -57,6 +57,8 @@
         var infoWindowOpened = false;
         var inInfoWindow = false;
         var stopClosingInfoWindow = false;
+        var UrlPara = "";
+
         //Init
         $(document).ready(function () {
             //Device detect
@@ -90,11 +92,15 @@
                     infoWindowOpened = true;
                     //stopClosingInfoWindow = true;
 
-                    var loadingPath = "loading" + (parseInt(Math.random() * 6 + 1)) + ".gif";
+                    var pic = (parseInt(Math.random() * 6 + 1));
+                    var loadingPath = "loading" + pic + ".gif";
+                    //console.info(pic); //pic number.
                     $("<img>", {
                         "class": "loading",
                         "src": "resources/" + loadingPath
                     }).appendTo("#infoWindow")
+
+                    setTimeout(loadInfoWindow, 500);
                 }
             });
 
@@ -143,7 +149,7 @@
                     infoWindow.css("left", ((e.pageX - 5 - w) + "px"));
                 else
                     infoWindow.css("left", ((e.pageX + 5) + "px"));
-                console.info(e.clientY + " " + $(document).height());
+                //console.info(e.clientY + " " + $(document).height());
                 if (h + e.clientY > $(window).height()) {
                     infoWindow.css("top", ((e.pageY - 20 - h) + "px"));
                 }
@@ -180,11 +186,18 @@
                 infoWindowOpened = false;
             }
         }
+
+        function loadInfoWindow() {
+            $.post("http://zhipengyang.com/cv.php?infoWindow=" + UrlPara, function (data, status) {
+                $("#infoWindow").html(data);
+                console.info("Request: " + UrlPara + "\nStatus: " + status);
+            });
+        }
     </script>
 
     <link rel="stylesheet" href="resources/index.css" />
     <script type="text/javascript">
-        console.info("WebCV v0.5");
+        console.info("WebCV v0.6");
     </script>
 </head>
 <body>
@@ -204,8 +217,8 @@
             </div>
             <div class="cardContent" id="cardContent0">
                 <!--Card content-->
-                <p class="mouseover">Name: <span>YANG</span></p>
-                <p class="mouseover">Surname: <span>Zhipeng</span></p>
+                <p class="mouseover" onmouseover="UrlPara = 'pic'">Name: <span>YANG</span></p>
+                <p class="mouseover" onmouseover="UrlPara = 'pic'">Surname: <span>Zhipeng</span></p>
                 <p>Age: <span>23</span></p>
                 <p>Address: <span>Résidence Bachelard, L322, Cité Scientifique, 59650, Villeneuve d'Ascq, France</span></p>
                 <p>Telephone number: <span>+33(0)6.95.32.88.79</span></p>
@@ -221,10 +234,10 @@
             </div>
             <div class="cardContent" id="cardContent1">
                 <!--Card content-->
-                <p>2012-2013: <span>DAEFLE (DIPLÔME D’APTITUDE À L’ENSEIGNEMENT DU FRANÇAIS LANGUE ÉTRANGÈRE) à <span class="mouseover">Université de Valenciennes et du Hainaut-Cambrésis</span></span></p>
-                <p>2013-2014: <span>Licence 1 Informatique à <span class="mouseover">Université de Valenciennes et du Hainaut-Cambrésis</span></span></p>
-                <p>2014-2015: <span>Licence 2 Informatique à <span class="mouseover">Université Lille 1 Sciences et Technologies</span></span></p>
-                <p>2015-2016: <span>Licence 3 Informatique à <span class="mouseover">Université Lille 1 Sciences et Technologies</span></span></p>
+                <p>2012-2013: <span>DAEFLE (DIPLÔME D’APTITUDE À L’ENSEIGNEMENT DU FRANÇAIS LANGUE ÉTRANGÈRE) à <span class="mouseover" onmouseover="UrlPara = 'val'">Université de Valenciennes et du Hainaut-Cambrésis</span></span></p>
+                <p>2013-2014: <span>Licence 1 Informatique à <span class="mouseover" onmouseover="UrlPara = 'val'">Université de Valenciennes et du Hainaut-Cambrésis</span></span></p>
+                <p>2014-2015: <span>Licence 2 Informatique à <span class="mouseover" onmouseover="UrlPara = 'lille1'">Université Lille 1 Sciences et Technologies</span></span></p>
+                <p>2015-2016: <span class="mouseover" onmouseover="UrlPara = 'lille1'">Licence 3 Informatique à <span class="mouseover">Université Lille 1 Sciences et Technologies</span></span></p>
             </div>
         </div>
         <div>

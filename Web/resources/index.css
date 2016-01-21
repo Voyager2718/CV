@@ -50,6 +50,11 @@ h3 {
     z-index: 999;
 }
 
+    #infoWindow img {
+        max-width: 300px;
+        max-height: 300px;
+    }
+
 .loading {
     width: 100px;
     height: 100%;
