@@ -1,0 +1,140 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.11 (19/6/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same
+% directory as this .tex file. These files provide the resume style and themes
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage[scale=0.75]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Zhipeng} % Your first name
+\familyname{YANG} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Curriculum Vitae}
+\address{Résidence Bachelard, L322, Cité Scientifique}{Villeneuve d'Ascq}
+\mobile{+33(0)69 53 28 87 9}
+\email{zhipeng.yang.it@hotmail.com}
+\homepage{voyager2718.github.io/CV/Web2}{Page personne} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+\photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvtitle % Print the CV title
+
+\section{Autres types de CV}
+\cvitem{Web CV}{\url{http://voyager2718.github.io/CV/Web2}}
+\cvitem{CV sur potable(Android)}{\url{http://voyager2718.github.io/CV/App/MyCV.apk}}
+\section{Page GitHub}
+\cvitem{GitHub}{\url{http://voyager2718.github.com}}
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\section{Education}
+
+\cventry{2012--2013}{DAELFE(Français)}{Universié de Valenciennes et du Hainaut-Cambrésis}{}{}{}  % Arguments not required can be left empty
+\cventry{2013--2014}{Licence 1 Informatique}{Universié de Valenciennes et du Hainaut-Cambrésis}{}{}{}
+\cventry{2014--2015}{Licence 2 Informatique}{Université Lille1 - Sciences et technologies}{}{}{}
+\cventry{2015--2016}{Licence 3 Informatique}{Université Lille1 - Sciences et technologies}{}{}{}
+
+\section{Expérience}
+\cvitem{2014-2015}{On a fait codage, architecture élémentaire, PHP, PostgreSQL, JavaScript, Programmation Orientée Objet(Java), etc.}
+\cvitem{2015-2016}{On a fait Programmation de Système(Linux), Théorie de Base de Donnée, Automaton, Algorithmique et Recherche Opérationnelle, Programmation Orientée Objet(Java, Design Pattern), etc.}
+
+\section{Compétence professionelle}
+
+\cvitem{Langage de programmation}{\textsc{java}, C, C++, \textsc{Python}, JavaScript, PHP, C\#{}, Haskell, Prolog, yacc, lex}
+\cvitem{Base de donnée}{MySQL, PostgreSQL}
+\cvitem{Technologie}{Dévelopement Android, Dévelopement Web, Dévelopement Desktop,Gestion de base de donnée, Créer les vidéos}
+\cvitem{Technique}{Navigation Drawer, jQuery, Bootstrap, Programmation Linux}
+\cvitem{Logiciel}{Android Studio, Visual Studio, GCC, G++, PHP Storm, Eclipse, Git, IntelliJ}
+\cvitem{Image/Vidéo}{Adobe Photoshop, Adobe After Effects, Adobe Premiere, Cinema 4D}
+\cvitem{Documentation}{\textsc{\LaTeX}, Word}
+
+%----------------------------------------------------------------------------------------
+%	COMMUNICATION SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Communication Skills}
+
+\cvitem{2014-2015}{Technique de Communication(Présenter un sujet)}
+\cvitem{2014-2015}{Technique de Communication(Communication dans l'entreprise)}
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Languages}
+
+\cvitemwithcomment{Chinois}{Langue maternelle}{}
+\cvitemwithcomment{Français}{Passable}{}
+\cvitemwithcomment{Anglais}{Bien}{}
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Loisirs}
+
+\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+
+\cvlistdoubleitem{La natation}{Tir à l'arc}
+\cvlistdoubleitem{Maquette}{Tournage}
+\cvlistitem{etc..}
+
+%----------------------------------------------------------------------------------------
+%	COVER LETTER
+%----------------------------------------------------------------------------------------
+
+% To remove the cover letter, comment out this entire block
+
+%\clearpage
+
+%\recipient{HR Department}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
+%\date{\today} % Letter date
+%\opening{Dear Sir or Madam,} % Opening greeting
+%\closing{Sincerely yours,} % Closing phrase
+%\enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
+
+%\makelettertitle % Print letter title
+
+%\lipsum[1-3] % Dummy text
+
+%\makeletterclosing % Print letter signature
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
