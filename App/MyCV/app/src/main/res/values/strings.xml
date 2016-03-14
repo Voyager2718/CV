@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">My CV</string>
+
+    <string name="title_section1">Personal Info</string>
+    <string name="title_section2">Education Info</string>
+    <string name="title_section3">Prof Exp</string>
+    <string name="title_section4">Abilities</string>
+    <string name="title_section5">Hobbies</string>
+
+    <string name="long_text">a\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\n</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="email">E-mail</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="name">YANG Zhipeng</string>
+    <string name="address">Residence Bachelard, L322, Cite Scientifique, 59650, Villeneuve d\'Ascq, France</string>
+    <string name="tel">+33(0)6.95.32.88.79</string>
+    <string name="email_address">zhipeng.yang.it@hotmail.com</string>
+    <string name="nationality">Chinese</string>
+
+    <string name="edu_1">2012&#8211;2013: DAEFLE (DIPLÔME D\'APTITUDE À L\'ENSEIGNEMENT DU FRANÇAIS LANGUE ÉTRANGÈRE) à Université de Valenciennes et du Hainaut-Cambrésis</string>
+    <string name="edu_2">2013&#8211;2014: Licence 1 Informatique à Université de Valenciennes et du Hainaut-Cambrésis</string>
+    <string name="edu_3">2014&#8211;2015: Licence 2 Informatique à Université Lille 1 Sciences et Technologies</string>
+    <string name="edu_4">2015&#8211;2016: Licence 3 Informatique à Université Lille 1 Sciences et Technologies</string>
+
+    <string name="exp_1">2014&#8211;2015: We have learnt coding, computer architecture, PHP, PostgreSQL, JavaScript in university, Object Oriented Programming (Java).</string>
+    <string name="exp_2">2015&#8211;2016: We have learnt OS programming (Linux), Database theory, Automaton, Algorithems and Operations Research, Object Oriented Programming(Java, Design Pattern).</string>
+
+    <string name="tech">Technologies</string>
+    <string name="abilities_a1">Frontend and backend(CSS,JavaScript/JQuery, PHP, MySQL, PostgreSQL)</string>
+    <string name="abilities_a2">OS Programming (Linux - mutex, pthread, implemented some commands in Linux, ..)</string>
+    <string name="abilities_a3">Desktop applications (Windows - C# WinFrom)</string>
+    <string name="abilities_a4">Android App developing</string>
+
+    <string name="software">Software</string>
+    <string name="abilities_b1">Microsoft Visual Studio\nJetbrain PHP storm\nJetbrain IntelliJ\nEclipse\nGitHub\nAndroid Studio\nAdobe Photoshop\nAdobe After Effects\nAdobe Premiere\nCinema 4D\nArduino\nOffice</string>
+
+    <string name="languages">Languages</string>
+    <string name="abilities_b2">C\nC#\nC++\nPHP\nJava\nRuby\nPython\nJavaScript\nPostgreSQL/MySQL\nLATEX</string>
+
+    <string name="hobbies_1">Sports: Swimming, Archery, Shooting, ..\nOthers: Scale model, Arduino, ..</string>
+</resources>

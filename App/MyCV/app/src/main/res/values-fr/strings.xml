@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My CV</string>
+
+    <string name="title_section1">Info personnelles</string>
+    <string name="title_section2">Formation</string>
+    <string name="title_section3">Exp professionnelles</string>
+    <string name="title_section4">Compétences</string>
+    <string name="title_section5">Loisirs</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="email">E-mail</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="name">YANG Zhipeng</string>
+    <string name="address">Résidence Bachelard, L322, Cité Scientifique, 59650, Villeneuve d\'Ascq, France</string>
+    <string name="tel">+33(0)6.95.32.88.79</string>
+    <string name="email_address">zhipeng.yang.it@hotmail.com</string>
+    <string name="nationality">Chinese</string>
+
+    <string name="edu_1">2012&#8211;2013: DAEFLE (DIPLÔME D\'APTITUDE À L\'ENSEIGNEMENT DU FRANÇAIS LANGUE ÉTRANGÈRE) à Université de Valenciennes et du Hainaut-Cambrésis</string>
+    <string name="edu_2">2013&#8211;2014: Licence 1 Informatique à Université de Valenciennes et du Hainaut-Cambrésis</string>
+    <string name="edu_3">2014&#8211;2015: Licence 2 Informatique à Université Lille 1 Sciences et Technologies</string>
+    <string name="edu_4">2015&#8211;2016: Licence 3 Informatique à Université Lille 1 Sciences et Technologies</string>
+
+    <string name="exp_1">2014&#8211;2015: Projet d’un mois.
+        En Technologie du Web: Création d’un site web dynamique en utilisant PHP, PostgreSQL JavaScript, CSS, HTML
+        Maîtriser de traaitement des données: la collecte, l’utilisation, la gestion et la communication.
+        Maîtriser les systèmes et les outils informatiques.
+        Travailler en équipe.
+        Capacité d’écoute, de dialogue et d’argumentation.</string>
+    <string name="exp_2">2015&#8211;2016: Projet d’un mois.
+    En Conception Orientée Objet: Création d’une application dynamique en utilisant Java et aussi les Design Pattern.</string>
+
+    <string name="tech">Technologies</string>
+    <string name="abilities_a1">Frontend et backend(CSS,JavaScript/JQuery, PHP, MySQL, PostgreSQL)</string>
+    <string name="abilities_a2">Programmation système (Linux - mutex, pthread, implemented some commands in Linux, ..)</string>
+    <string name="abilities_a3">Dévelopement Windows (C# WinFrom)</string>
+    <string name="abilities_a4">Android App</string>
+
+    <string name="software">Logiciels</string>
+    <string name="abilities_b1">Microsoft Visual Studio\nJetbrain PHP storm\nJetbrain IntelliJ\nEclipse\nGitHub\nAndroid Studio\nAdobe Photoshop\nAdobe After Effects\nAdobe Premiere\nCinema 4D\nArduino\nOffice</string>
+
+    <string name="languages">Langages</string>
+    <string name="abilities_b2">C\nC#\nC++\nPHP\nJava\nRuby\nPython\nJavaScript\nPostgreSQL/MySQL\nLATEX</string>
+
+    <string name="hobbies_1">Sports: Natation, Tir à l\'arc\nOthers: Maquettes, Arduino, ..</string>
+</resources>
