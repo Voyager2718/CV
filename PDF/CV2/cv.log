@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.24)  2 APR 2016 23:30
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.24)  4 MAY 2016 09:41
 entering extended mode
 **cv.tex
 (C:\Users\YANG\Documents\GitHub\CV\PDF\CV2\cv.tex
@@ -532,12 +532,12 @@ Requested font "ec-lmcsc10" at 10.95pt
  -> ec-lmcsc10
 Requested font "ec-lmro10" at 10.95pt
  -> ec-lmro10
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 89.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 88.
 (C:\CTEX\MiKTeX\tex\latex\lm\omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/sl' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 89.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 88.
 Requested font "ec-lmsso12" at 14.4pt
  -> ec-lmsso12
 Requested font "umvs" at 14.4pt
